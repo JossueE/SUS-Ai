@@ -72,7 +72,8 @@ def ai(prompt):
         text = response['choices'][0]['message']['content']
         print(text)
         say(text)
-        # todo: Wrap this inside of a  try catch block
+    
+        # If we want to save what we write with Ai we can do it with this chunck
         """   
         #We can save the answers if we want
         if not os.path.exists("Openai"):
@@ -125,6 +126,8 @@ def clear_terminal():
      os.system('cls' if os.name == 'nt' else 'clear')
  
 def open(query):
+    #We can open different Websites.
+    #You can check your websites added in lists.py.
     if "open" in query:
         query = query.replace("open", "").strip()
 
@@ -134,12 +137,14 @@ def open(query):
             webbrowser.open(site[1])
 
 def time():
+    #Valid the time of our PC.
     hour = datetime.datetime.now().strftime("%H")
     min = datetime.datetime.now().strftime("%M")
     print(f"Señor son las {hour} horas con {min} minutos")
     say(f"Señor son las {hour} horas con {min} minutos")
 
 def play_in_spotify(song):
+    #We can use this function to make our music searchs with spotify, but you need to add your client_id and client_secret in apys.py.
     client_id = apys.CLIENT_ID_SP
     client_secret = apys.CLIENT_SECRET_SP
 
@@ -169,6 +174,7 @@ def play_in_spotify(song):
         pyautogui.press("enter")
 
 def search_number(name):
+    #Valid the If the name has a number in our contacts matrix. 
         for number in lists.numbers:
             if len(number) > 1:
                 element = number[1]
