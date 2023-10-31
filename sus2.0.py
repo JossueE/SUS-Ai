@@ -174,7 +174,7 @@ def play_in_spotify(song):
         pyautogui.press("enter")
 
 def search_number(name):
-    #Valid the If the name has a number in our contacts matrix. 
+    #Valid the If the name has a number in our numbers matrix in lists, you would need to add your numbers. 
         for number in lists.numbers:
             if len(number) > 1:
                 element = number[1]
@@ -183,17 +183,20 @@ def search_number(name):
         return None
 
 def messages_whatsapp(query, name):
+    #Send messages in whasapp if the number exist in numbers.
     kit.sendwhatmsg_instantly(search_number(name), query, 8, True, 5)
     print("Su mensaje ha sido enviado")
     say("Su mensaje ha sido enviado")
 
 def functions(query):
-
+    #It is a way to simplify our main
     if "abre" in query:
         open(query)
 
     # todo: Add a feature to play a specific song
     if "reproduce" in query:
+        #you should change for spotify if you want
+        #play_in_spotify(query)
         play_in_youtube(query)
 
     elif "qué hora es" in query:
