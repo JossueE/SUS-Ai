@@ -1,4 +1,4 @@
-#Here we can put whaever we want
+#Here we can put all of our web sites.
 sites = [
     ["YouTube", "https://www.youtube.com"],
     ["Wikipedia", "https://www.wikipedia.org"],
@@ -22,6 +22,7 @@ sites = [
     ["The New York Times", "https://www.nytimes.com"],
 ]
 
+#This is how SUS-Ai refers to us.
 welcome = [
     "¡Bienvenido, señor!",
     "Saludos, señor.",
@@ -72,10 +73,11 @@ welcome = [
     "Un placer saludarle señor. ¿Qué puedo hacer por usted?",
 ]
 
-numbers = [["+593998105260","mica"],
-           ["+593995228764", "mamita"],
-           ["+525555001415", "julián"],
-           ["+525568687284", "chava"],
-           ["+525537187745", "karina"],
-           ["+593995620092", "came"],
-           ["+593995229311", "papi"]]
+#This is how we should need to write the numbers that we want to add.
+numbers = [["+593nnnnnnnnn","mica"],
+           ["+593nnnnnnnnn", "mamita"],
+           ["+52nnnnnnnnnn", "julián"],
+           ["+52nnnnnnnnnn", "chava"],
+           ["+52nnnnnnnnnn", "karina"],
+           ["+593nnnnnnnnn", "came"],
+           ["+593nnnnnnnnn", "papi"]]
